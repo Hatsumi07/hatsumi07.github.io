@@ -1,0 +1,37 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Template for CIT 160</title>
+      <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  
+  <body>
+      <header>
+          <h1>Week 4: Stretch Assignment</h1>
+          <h2>Crystal Cardenas</h2>
+      </header>
+      <main>
+          <h3>1 Nephi 3:7</h3>
+          <label>Enter a name: <input type="text" id="name"></label>
+          <label><button onclick="addName()">Show scripture</button></label>
+          <hr>
+          <p><span id="output"></span></p>
+      </main>
+      <footer>
+          &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script>
+          function addName() {
+              let nameInput = document.getElementById("name").value;
+              let scripture = "And it came to pass that I, " + nameInput + ",said unto my father: I will go and do the things wich the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them.";
+              document.getElementById("output").innerHTML = scripture;
+          }
+
+
+      </script>
+  </body>
+
+  </html>

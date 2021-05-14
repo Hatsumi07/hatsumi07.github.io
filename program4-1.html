@@ -1,0 +1,41 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Template for CIT 160</title>
+      <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  
+  <body>
+      <header>
+          <h1>Week 4: Add Two Numbers</h1>
+          <h2>Crystal Cardenas</h2>
+      </header>
+      <main>
+          <h3>Add Two Numbers</h3>
+          <label>Enter Number One: <input type="text" id="number1"></label>
+          <label>Enter Number Two: <input type="text" id="number2"></label>
+          <label><button onclick="addNumbers()">Add Numbers</button></label>
+          <hr>
+          <p><span id="output"></span></p>
+      </main>
+      <footer>
+          &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script>
+          function addNumbers() {
+              //Asks for two numbers
+              let firstNumber = parseFloat(document.getElementById("number1").value);
+              let secondNumber = parseFloat(document.getElementById("number2").value);
+              //assigns the addition of both numbers to  a variable
+              let sum = firstNumber + secondNumber;
+              //returns the sum of both numbers
+              document.getElementById("output").innerHTML = "the sum of " + firstNumber + " and " + secondNumber + " equals " + sum + "!";
+          }
+
+      </script>
+  </body>
+
+  </html>
