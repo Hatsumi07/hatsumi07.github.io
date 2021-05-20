@@ -1,0 +1,39 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Template for CIT 160</title>
+      <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  
+  <body>
+      <header>
+          <h1>Week 5: Convert Pounds To Kilograms</h1>
+          <h2>Crystal Cardenas</h2>
+      </header>
+      <main>
+          <h3>Convert pounds to kilograms</h3>
+          <label>Enter pounds: <input type="text" id="pounds"></label>
+          <label><button onclick="converter()">convert</button></label>
+          <hr>
+          <p id="kilograms"></p>
+      </main>
+      <footer>
+          &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script>
+          function converter() {
+              //Asks for pounds
+              let input = parseFloat(document.getElementById("pounds").value);
+              //converts pounds into kilograms by multiplying the pounds by 0.453592
+              let conversion = input * 0.453592;
+              //returns the pounds converted into kilograms
+              document.getElementById("kilograms").innerHTML = Math.round(conversion * 10) / 10;
+          }  
+
+      </script>
+  </body>
+
+  </html>
