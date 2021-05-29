@@ -1,0 +1,38 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Exam</title>
+  </head>
+  
+  <body>
+      <header>
+          <h1>Exam: Question 2</h1>
+          <h2>Crystal Cardenas</h2>
+      </header>
+      <main>
+          <h3>Calculate the volume of a round cylinder</h3>
+          <label>Enter radius: <input type="text" id="input1"></label>
+          <label>Enter height: <input type="text" id="input2"></label>
+          <label><button onclick="getVolume()">Calculate volume</button></label>
+          <hr>
+          <p><span id="output"></span></p>
+      </main>
+  </body>
+
+  <script>
+    function getVolume() {
+        //Asks for the radius and the height
+        let radius= parseFloat(document.getElementById("input1").value);
+        let height = parseFloat(document.getElementById("input2").value);
+        //calculates the volume of the cylinder
+        let volume = (3.14 * radius **2 * height);
+        //returns the volume of the cylinder
+        document.getElementById("output").innerHTML = Math.round(volume);
+    }
+
+</script>
+
+  </html>

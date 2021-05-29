@@ -1,0 +1,40 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Exam</title>
+  </head>
+  
+  <body>
+      <header>
+          <h1>Exam: Question 1</h1>
+          <h2>Crystal Cardenas</h2>
+      </header>
+      <main>
+          <h3>Calculate employee's after tax pay</h3>
+          <label>Enter total regular hours: <input type="text" id="input1"></label>
+          <label>Enter total overtime hours: <input type="text" id="input2"></label>
+          <label><button onclick="calculation()">Get after tax pay</button></label>
+          <hr>
+          <p><span id="output"></span></p>
+      </main>
+  </body>
+
+  <script>
+    function calculation() {
+        //Asks for the amount of regular hours and overtime hours
+        let totalRegularHours= parseFloat(document.getElementById("input1").value);
+        let totalOvertimeHours = parseFloat(document.getElementById("input2").value);
+        //First calculates the total pay then gets the tax and finally substracts the tax from the total pay
+        let totalPay = (15 * totalRegularHours + 22.50 * totalOvertimeHours);
+        let tax = totalPay * 0.15
+        let afterTaxPay = totalPay - tax
+        //returns the after tax pay rounded to two decimals
+        document.getElementById("output").innerHTML = "$" + Math.round(afterTaxPay * 100) / 100;
+    }
+
+</script>
+
+  </html>
