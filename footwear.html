@@ -1,0 +1,36 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Template for CIT 160</title>
+  </head>
+  
+  <body>
+      <header>
+          <h1>Week 6: Weather shoes</h1>
+          <h2>Crystal Cardenas</h2>
+      </header>
+      <main>
+          <label for="weather-select">What is the weather?:</label>
+
+          <select id="weather">
+            <option value="">--Please choose an option--</option>
+            <option value="hot">Hot</option>
+            <option value="rain">Rain</option>
+            <option value="snow">Snow</option>
+            <option value="unknown">Unknown</option>
+          </select>
+
+              <label><button onclick="checkWeather()">Get shoes</button></label>
+          <hr>
+          <p id="output"></p>
+      </main>
+      <footer>
+          &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script src="script/footwearScript.js"></script>
+  </body>
+
+  </html>

@@ -6,7 +6,6 @@ function calculation() {
     let answer = parseFloat(document.getElementById("answer").value);
     let message = "Incorrect 😢";
     let answerKey = 0
-    document.getElementById("output").innerHTML = message;
     switch (operator) { //verifies if the operator is +, -, *, /
         case "+":
             answerKey = firstNumber + secondNumber;  
