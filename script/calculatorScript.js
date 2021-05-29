@@ -28,5 +28,6 @@ function calculation() {
         message = "Correct! 🏆";
     
     }    
+    //returns the correct message
     document.getElementById("output").innerHTML = message;
 }  
