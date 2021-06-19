@@ -1,0 +1,38 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Assignment 09</title>
+      <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  
+  <body>
+      <header>
+          <h1>Week 9: Repetition</h1>
+          <h2>Crystal Cardenas</h2>
+      </header>
+      <main>
+          <h3>Times Table</h3>
+          <label><button onclick="fiveTimes()">Start the program</button></label>
+          <hr>
+          <p id="output"></p>
+      </main>
+      <footer>
+          &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script>
+          function fiveTimes() {
+            //creates a vairable to store the output in a string
+              let output = ''
+              for (let number = 1; number <= 12; number++) {//iterates through the numbers until it reaches 12 
+                  let times = number * 5;//Multiplies each number by 5
+                  output += `5 x ${number} = ${times}<br>`; // adds the result to output
+              }
+              document.getElementById("output").innerHTML = output;//Returns the output
+          }
+      </script>
+  </body>
+
+  </html>
