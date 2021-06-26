@@ -1,0 +1,46 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Week 10: functions-Crystal Cardenas</title>
+      <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  
+  <body>
+      <main>
+          <label>Temperature: <input type="text" id="temperature"></label>
+          <label>Wind Speed: <input type="text" id="windSpeed"></label>
+          <label><button onclick="doInputOutput()">Wind Chill</button></label>
+          <div id="output"></div>
+      </main>
+      <footer>
+          &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script>
+          function doInputOutput() {
+              //input
+              let temperature = parseFloat(document.getElementById("temperature").value);
+              let windspeed = parseFloat(document.getElementById("windSpeed").value);
+              //processing
+              if (temperature <= 50 && windspeed >= 3) {
+                  let windchill = windChill(temperature, windspeed);
+                  //output
+                  document.getElementById("output").innerHTML = windchill;
+              }
+              else {
+                  let wrongInput = "Please enter a temperature below 50 degrees Fahrenheit or a wind speed above 3 miles per hour.";
+                  //output
+                  document.getElementById("output").innerHTML = wrongInput;
+              }  
+          }
+          //processing
+          function windChill(tempF, speed) {
+              let output = 35.74 + 0.6215 * tempF - 35.75 * speed ** 0.16 + 0.4275 * tempF * speed ** 0.16;
+              return output;
+          }
+      </script>
+  </body>
+
+  </html>
