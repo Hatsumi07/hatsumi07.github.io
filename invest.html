@@ -1,0 +1,46 @@
+<!doctype html>
+  <html lang="en-us">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0">
+      <title>Week 11: functions-Crystal Cardenas</title>
+      <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  
+  <body>
+      <main>
+          <h3>Investment Calculator</h3>
+          <label>Amount invested (principal) <input type="text" id="input1"></label>
+          <label>Annual rate (example:.08) <input type="text" id="input2"></label>
+          <label>Number of years <input type="text" id="input3"></label>
+          <label>Periods per year <input type="text" id="input4"></label>
+          <label><button onclick="doFV()">Compute future value</button></label>
+          <p id="output"></p>
+      </main>
+      <footer>
+          &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
+      </footer>
+      <script>
+          function doFV() {
+              //input
+              let principal = parseFloat(document.getElementById("input1").value);
+              let rate = parseFloat(document.getElementById("input2").value);
+              let years = parseFloat(document.getElementById("input3").value);
+              let periods = parseFloat(document.getElementById("input4").value);
+              //call the function computeFutureValue()
+              let getFutureValue = computeFutureValue(principal, rate, years, periods);
+              //output
+              document.getElementById("output").innerHTML = getFutureValue.toFixed(2); 
+          }
+          //processing
+          function computeFutureValue(amountInvested, annualRate, numberOfYears, periodsPerYear) {
+              let r = annualRate / periodsPerYear;
+              let n = periodsPerYear * numberOfYears;
+              let futureValue = amountInvested * (1 + r) ** n;
+              return futureValue;
+          }
+      </script>
+  </body>
+
+  </html>

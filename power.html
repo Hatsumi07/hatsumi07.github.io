@@ -20,7 +20,19 @@
       <footer>
           &copy;2021 &bull; Crystal Cardenas &bull; BYU-Idaho &bull; CIT 160
       </footer>
-      <script src="script/powerScript.js"></script>
+      <script>
+          function power() {
+              //creates a vairable to store the output in a string
+              let output = ''
+              //for loop
+              for (let number = 0; number <= 31; number++) {
+                  let power = 2 ** number;//creates a variable power to store the powers
+                  output += `${power}; `; // adds the result to the empty string output
+    
+              }
+              document.getElementById("output").innerHTML = output;//Returns the output
+          }
+      </script>
   </body>
 
   </html>
